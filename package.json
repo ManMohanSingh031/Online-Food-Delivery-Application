@@ -1,20 +1,19 @@
 {
-  "homepage": "https://github.com/ManMohanSingh031.github.io/Online-food-delivery",
+  "homepage": "http://ManMohanSingh031.github.io/Online-Food-Delivery-Application",
 
-  "name": "online-food-delivery",
+  "name": "@manmohansingh031/online-food-delivery-application",
   "version": "1.0.0",
   "description": "This is Namaste React Application which is Resturent Application like swiggy lol ",
   "scripts": {
     "start": "parcel index.html",
     "test": "jest",
-      "build": "parcel build ./index.html --public-url /Online-food-delivery",
-      "predeploy": "npm run build",
-      "deploy": "gh-pages -d dist"    
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "Man Mohan Singh",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ManMohanSingh031/Online-food-delivery/issues"
+    "url": "https://github.com/ManMohanSingh031/Online-Food-Delivery-Application/issues"
   },
   "devDependencies": {
     "@babel/core": "^7.23.7",

@@ -7,7 +7,7 @@ import About from './src/Components/About';
 import Footer from './src/Components/Footer';
 import Contact from './src/Components/Contact';
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-// import Error from './src/Components/Error';
+import Error from './src/Components/Error';
 import RestaurantMenu from './src/Components/RestaurantMenu';
 import Profile from './src/Components/Profile';
 import { Provider } from 'react-redux';
@@ -30,7 +30,7 @@ const appRouter = createBrowserRouter([
   {
     path: "/",
     element:<App />,
-    // errorElement: <Error />,
+    errorElement: <Error />,
     children: [
       {
         path: "/about",
@@ -60,6 +60,7 @@ const appRouter = createBrowserRouter([
         element: <Cart />,
       },
     ],
+    errorElement: <Error />,
   },
 ]);
 
