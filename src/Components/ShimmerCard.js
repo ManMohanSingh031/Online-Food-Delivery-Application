@@ -1,6 +1,6 @@
 //ShimmerCard.js
 import React from 'react';
-import { numberOfShimmerCards, numberOfShimmerMenuCards } from '../../Constant';
+import { numberOfShimmerCards } from '../../Constant';
 
 const ShimmerCard = () => {
   return (
@@ -10,7 +10,7 @@ const ShimmerCard = () => {
       <div className="h-10 mb-2 bg-gray-400 rounded w-1/2"></div>
       <div className="h-10 mb-2 bg-gray-400 rounded w-1/4"></div>
       <div className="h-10 mb-2 bg-gray-400 rounded w-3/4"></div>
-      <div className="h-10 mt-4 bg-blue-500 rounded"></div>
+      <div className="h-10 mt-4 bg-blue-700 rounded"></div>
     </div>
   );
 };
@@ -57,7 +57,6 @@ const ShimmerCards = () => {
     <>
     <div className="flex flex-wrap justify-around">
       {Array(numberOfShimmerCards).fill().map((_, i) => <ShimmerCard key={i} />)};
-      {Array(numberOfShimmerMenuCards).fill().map((_, i) => <ShimmerMenuCard key={i} />)}
     </div>  
     </>
   );

@@ -22,13 +22,13 @@ const RestaurantCard = ({ name, costForTwo, cloudinaryImageId, cuisines, avgRati
       <h2 className="text-lg font-semibold mb-2">{name}</h2>
       <p className="text-gray-700 mb-2">{costForTwo}</p>
       <p className="text-sm text-gray-500">{cuisines.join(", ")}</p>
-      <div className="flex items-center mb-2">
+      <div className="flex items-center mb-2 text-gray-500">
       Rating:
-        <p className="text-gray-700 ml-2">{avgRatingString}</p>
+        <p className="text-gray-800 ml-2">{avgRatingString}</p>
         <StarIcon className="h-5 w-5 text-yellow-500" />
       </div>
       <p className="text-sm text-gray-500">Delivery: {sla?.deliveryTime} Minute</p>
-      <Link to={"/restaurant/" + id} className="mt-4 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center">
+      <Link to={"/restaurant/" + id} className="mt-4 inline-block bg-blue-800 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center">
         Click To Menu 
       </Link>
     </div>

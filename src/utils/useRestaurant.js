@@ -30,7 +30,7 @@ const useRestaurant = () => {
       console.log(error);
     }
   }
-  return { restaurant, filteredRestaurants };
+  return { restaurant, filteredRestaurants, setFilteredRestaurants };
 };
 
 export default useRestaurant;

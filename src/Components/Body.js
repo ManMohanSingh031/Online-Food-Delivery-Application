@@ -1,6 +1,7 @@
+// Desc: This file contains the Body component which is the main component of the app.
 import React from 'react';
 import RestaurantCard from './RestaurantCard';
-import SearchBar from './SearchBar';
+import SearchBar from './Searchbar';
 import { ShimmerCards } from './ShimmerCard';
 import { filterData } from '../utils/Helper';
 import useRestaurant from '../utils/useRestaurant';
@@ -10,6 +11,7 @@ const Body = () => {
 
   return (
     <>
+     <div className="bg-gray-200">
       <SearchBar
         setFilteredRestaurants={setFilteredRestaurants}
         restaurant={restaurant}
@@ -30,6 +32,7 @@ const Body = () => {
           })}
         </div>
       )}
+      </div>
     </>
   );
 };

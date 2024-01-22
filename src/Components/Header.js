@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Logo from "../assets/checkmate.png";
 import {
   UserCircleIcon,
   ShoppingCartIcon,
@@ -13,7 +12,6 @@ import { Link } from "react-router-dom";
 import UserStatus from "./UserStatus";
 import { useSelector } from "react-redux";
 
-
 const Header = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [confirmPopup, setConfirmPopup] = useState(false);
@@ -21,7 +19,6 @@ const Header = () => {
 
   const cartItems = useSelector((store) => store.cart?.items);
   console.log(cartItems);
-  
 
   const togglePopup = () => {
     setShowPopup(!showPopup);
@@ -56,42 +53,43 @@ const Header = () => {
 
   return (
     <>
-      <nav className="flex flex-col sm:flex-row items-center justify-between p-6 bg-blue-500">
-        <div className="flex flex-col sm:flex-row items-center space-x-10">
-          <img src={Logo} alt="Company Logo" className="w-8 h-8" />
-          <div>
-            <Link to="/" className="text-white">
-              Home
-            </Link>
-          </div>
-          <div>
-            <Link to="/about" className="text-white">
-              About
-            </Link>
-          </div>
-          <div>
-            <Link to="/contact" className="text-white">
-              Contact
-            </Link>
-          </div>
-          <div className="flex justify-center items-center">
-            <UserStatus />
-          </div>
-        </div>
-        <div className="flex items-center space-x-5 mt-4 sm:mt-0">
-          <button className="flex items-center space-x-2 bg-white p-2 rounded relative">
-            <ShoppingCartIcon className="w-5 h-5 text-blue-500" />
-            <span>({cartItems?.length || 0}Items)</span>
-          </button>
-          <button
-            className="flex items-center space-x-2 bg-white p-2 rounded"
-            onClick={isLoggedIn ? handleLogout : handleLoginClick}
-          >
-            <UserCircleIcon className="w-5 h-5 text-blue-500" />
-            <span>{isLoggedIn ? "Logout" : "Login"}</span>
-          </button>
-        </div>
-      </nav>
+  <nav className="flex flex-col sm:flex-row items-center justify-between p-6 bg-blue-950">
+  <div className="flex flex-col sm:flex-row items-center space-x-20 ">
+    <Link
+      to="/" className="text-4xl font-bold w-20 h-10 text-white">EpicEats
+    </Link>
+    <div className="space-x-10">
+      <Link to="/" className="text-white">
+        Home
+      </Link>
+      <Link to="/about" className="text-white">
+        About
+      </Link>
+      <Link to="/contact" className="text-white">
+        Contact
+      </Link>
+    </div>
+    <div className="flex justify-center items-center">
+      <UserStatus />
+    </div>
+  </div>
+  <div className="flex items-center space-x-5 mt-4 sm:mt-0">
+    <Link to="/cart">
+      <button className="flex items-center space-x-2 bg-gray-100 p-2 rounded relative">
+        <ShoppingCartIcon className="w-5 h-5 text-blue-500" />
+        <span>({cartItems?.length || 0})</span>
+      </button>
+    </Link>
+
+    <button
+      className="flex items-center space-x-2 bg-gray-100 p-2 rounded"
+      onClick={isLoggedIn ? handleLogout : handleLoginClick}
+    >
+      <UserCircleIcon className="w-5 h-5 text-blue-500" />
+      <span>{isLoggedIn ? "Logout" : "Login"}</span>
+    </button>
+  </div>
+</nav>
       {confirmPopup && (
         <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-50">
           <div className="bg-white p-4 rounded shadow-lg relative">

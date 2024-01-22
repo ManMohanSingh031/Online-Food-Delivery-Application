@@ -1,3 +1,4 @@
+// Description: This file contains the Error component.
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import image from "../assets/error.png";
