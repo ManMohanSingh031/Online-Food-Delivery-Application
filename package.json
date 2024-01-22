@@ -8,7 +8,7 @@
     "start": "parcel index.html",
     "test": "jest",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "author": "Man Mohan Singh",
   "license": "ISC",
