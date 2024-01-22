@@ -9,3 +9,4 @@ test('Should load About-us', () => {
     const heading = screen.getByRole("heading");
     expect(heading).toBeInTheDocument();
     });
+    

@@ -17,5 +17,3 @@ export const Swiggy_MENU_API_URL = "https://thingproxy.freeboard.io/fetch/https:
 // Menu items api card types 
 export const MENU_ITEM_TYPE_KEY = "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory";
 export const RESTAURANT_TYPE_KEY = "type.googleapis.com/swiggy.presentation.food.v2.Restaurant";
-
-

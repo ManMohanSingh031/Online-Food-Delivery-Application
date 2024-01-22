@@ -30,3 +30,4 @@ const SearchBar = ({ setFilteredRestaurants, restaurant, filterData }) => {
 };
 
 export default SearchBar;
+

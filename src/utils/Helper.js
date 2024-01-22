@@ -4,3 +4,4 @@ export function filterData(searchTerm, restaurant) {
     );
     return filterData;
   };
+  
